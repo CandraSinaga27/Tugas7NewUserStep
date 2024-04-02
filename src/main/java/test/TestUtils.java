@@ -1,10 +1,7 @@
 package test;
 
 import org.kohsuke.randname.RandomNameGenerator;
-import test.data.Category;
-import test.data.Pet;
-import test.data.Status;
-import test.data.Tag;
+import test.data.*;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -33,6 +30,13 @@ public class TestUtils {
         return Pet.builder()
                 .id(Integer.toString(TestUtils.getRandomNumber()))
                 .name(TestUtils.getRandomWord())
+                .build();
+    }
+
+    public static User generateSimpleTemplateUser(){
+        return User.builder()
+                .id(Integer.toString(TestUtils.getRandomNumber()))
+                .username(TestUtils.getRandomWord())
                 .build();
     }
 
